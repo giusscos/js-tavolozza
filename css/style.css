@@ -7,3 +7,87 @@
 html{
     font-family: 'Open sans', sans-serif;
 }
+body{
+    max-height: 100vh;
+    background-color: #ddd;
+}
+button,
+input{
+    width: fit-content;
+    border: 0px solid;
+    color: currentColor;
+    background-color: transparent;
+}
+a{
+    color: currentColor;
+}
+ul,
+ol,
+menu{
+    list-style: none;
+}
+
+/* layout */
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.grid{
+    display: grid;
+}
+/* ELements */
+.main_header{
+    padding: 1rem 0.5rem;
+    background-color: #fff;
+}
+.main_header > .row {
+    align-items: center;
+    justify-content: space-evenly;
+}
+.input_grid_gen{
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+}
+.btn_reset{
+    cursor: pointer;
+    line-height: 1.25rem;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #999;
+    transition: 300ms ease-in-out;
+}
+.btn_reset:hover{
+    opacity: 0.8;
+}
+/*  Main */
+.paint{
+    padding: 3rem 1rem;
+}
+.main_content{
+    min-width: 300px;
+    min-height: 600px;
+    border-radius: 0.25rem;
+    border: 2px solid #999;
+    background-color: #fff;
+}
+/* Grid */
+.main_content > .grid{
+    grid-template-columns: repeat(60, 1fr);
+}
+.grid > div{
+    padding: 2.5px;
+    aspect-ratio: 1/1;
+    border: 1px solid #ddd;
+}
