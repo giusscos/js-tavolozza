@@ -1,58 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+html {
     font-family: 'Open sans', sans-serif;
 }
-body{
+
+body {
     max-height: 100vh;
     background-color: #ddd;
 }
 button,
-input{
+input {
     width: fit-content;
     border: 0px solid;
     color: currentColor;
     background-color: transparent;
 }
-a{
+a {
     color: currentColor;
 }
 ul,
 ol,
-menu{
+menu {
     list-style: none;
 }
 
+
 /* layout */
-.container{
+
+.container {
     margin: 0 auto;
     max-width: 1100px;
 }
-.row{
+
+.row {
     display: flex;
     flex-wrap: wrap;
 }
-.col{
+.col {
     display: flex;
     flex-direction: column;
 }
-.grid{
+.grid {
     display: grid;
 }
 /* ELements */
-.main_header{
+.main_header {
     padding: 1rem 0.5rem;
     background-color: #fff;
 }
-.main_header > .row {
+.main_header>.row {
     align-items: center;
     justify-content: space-evenly;
 }
-.input_grid_gen{
+.input_grid_gen {
     cursor: pointer;
     font-size: 1rem;
     text-align: center;
@@ -60,55 +64,76 @@ menu{
     border-radius: 0.5rem;
     border: 1px solid #ddd;
 }
-.btn_reset{
+.btn_wrapper{
+    flex-direction: row;
+}
+.btn_reset,
+.btn_gen {
     cursor: pointer;
     line-height: 1.25rem;
     border-radius: 0.25rem;
     padding: 0.25rem 0.75rem;
-    background-color: #999;
     transition: 300ms ease-in-out;
+}
+.btn_gen{
+    margin-right: 1rem;
+    border: 1px solid #999;
+}
+.btn_gen:hover{
+    background-color: #999;
+}
+.btn_reset{
+    background-color: #999;
 }
 .btn_reset:hover{
     opacity: 0.8;
 }
 /* Paint */
-.paint{
+
+.paint {
     padding: 3rem 1rem;
 }
+
+
 /* Palette */
-.palette_header{
+
+.palette_header {
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin-bottom: 2rem;
     background-color: #fff;
 }
-.color_picker{
+.color_picker {
     padding: 8px;
     cursor: pointer;
     margin: 0 0.15rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #000;
+    border: 2px solid #ddd;
     transition: 300ms ease-in-out;
-    border: 2px solid transparent;
 }
-.color_picker:hover{
+.color_picker[data-color='green']{
+    background-color: green;
+}
+.color_picker:hover {
     transform: scale(1.3);
     border: 2px solid #007e00;
 }
+
+
 /*  Main */
-.main_content{
-    min-width: 300px;
-    min-height: 600px;
+
+.main_content {
     border-radius: 0.25rem;
     border: 2px solid #999;
     background-color: #fff;
 }
+
 /* Grid */
-.main_content > .grid{
+/* .main_content>.grid {
     grid-template-columns: repeat(60, 1fr);
-}
-.grid > div{
+} */
+.grid>div {
     padding: 2px;
     aspect-ratio: 1/1;
     border: 1px solid #ddd;
